@@ -37,6 +37,12 @@ public class CalcControllerEmbeddedTest {
     }
 
     @Test
+    void problemResultTest() {
+        Assertions.assertThat(restTemplate
+                .getForObject("http://localhost:" + port + "/minus/30/oleg", String.class)).contains("unable to parse your expression");
+    }
+
+    @Test
     void AllTest() {
         restTemplate
                 .getForObject("http://localhost:" + port + "/minus/30/10", String.class);
