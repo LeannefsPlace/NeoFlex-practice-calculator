@@ -38,6 +38,7 @@ public class CalcController {
         String getAllString = expressionReader(minusService.getAll());
         jSONresult += getAllString.substring(0, getAllString.length() > 2 ? getAllString.length()-2 : 0);
         getAllString = expressionReader(plusService.getAll());
+        jSONresult += (getAllString.length() > 2 && jSONresult.length() > 20? ", ":"");
         jSONresult += getAllString.substring(0, getAllString.length() > 2 ? getAllString.length()-2 : 0);
         jSONresult += (" ] }");
         return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(jSONresult);
