@@ -14,8 +14,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Operation(
         summary = "get all sub expressions",
-        description = "returns an array of expressions",
-        tags = { "minus" }
+        description = "returns an array of expressions"
 )
 @ApiResponse(
         responseCode = "200",

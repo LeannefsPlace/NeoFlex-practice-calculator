@@ -16,7 +16,6 @@ import java.lang.annotation.Target;
 @Operation(
         summary = "get sum of elements",
         description = "additionally your expression will be added to database",
-        tags = { "plus" },
         parameters = {
                 @Parameter(name = "summand1", example = "50", required = true),
                 @Parameter(name = "summand2", example = "50", required = true)

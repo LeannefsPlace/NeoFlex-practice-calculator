@@ -16,7 +16,6 @@ import java.lang.annotation.Target;
 @Operation(
         summary = "get sub of elements",
         description = "additionally your expression will be added to database",
-        tags = { "minus" },
         parameters = {
                 @Parameter(name = "diminutive", example = "50", required = true),
                 @Parameter(name = "deductible", example = "50", required = true)
