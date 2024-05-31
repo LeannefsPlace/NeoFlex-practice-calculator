@@ -16,7 +16,7 @@ public class MinusService {
     }
 
     public List<Expression> getAll(){
-        return calculationMemoryRepository.getAllByExpressionContains("-");
+        return calculationMemoryRepository.getAllByExpressionContains("-").stream().filter(a->!a.getExpression().contains("+")).toList();
     }
 
     public boolean insert(Expression expression){
